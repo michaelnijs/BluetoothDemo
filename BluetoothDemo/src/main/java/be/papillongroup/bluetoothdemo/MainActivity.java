@@ -170,7 +170,7 @@ public class MainActivity extends Activity {
         try {
             bt_socket.close();
         } catch (IOException e) {
-            errorExit("Fatal Error","Failed to close the socket! " + e.getMessage());
+            errorExit("Fatal Error","Failed to close the socket!!! " + e.getMessage());
         }
     }
 
