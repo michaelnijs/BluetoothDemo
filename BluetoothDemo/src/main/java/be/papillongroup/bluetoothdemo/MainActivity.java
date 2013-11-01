@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
 
     private final UUID MY_UUID = UUID.fromString("0001101-0000-1000-8000-00805F9B34FB");
     // TODO Change when you know the correct MAC address!!!
-    private static String mac_address_arduino = "00:00:00:00:00:00";
+    private static String mac_address_arduino = "00:18:A1:12:16:BD";
 
     final int RECEIVE_MESSAGE = 1;
 
@@ -77,7 +77,7 @@ public class MainActivity extends Activity {
                     led_btn.setText("Led is On");
                     Toast.makeText(getBaseContext(), "Led will be turned on", 2);
                 } else {
-                    m_connected_thread.write("0");
+                    m_connected_thread.write("2");
                     led_btn.setText("Led is Off");
                     Toast.makeText(getBaseContext(), "Led will be turned off", 2);
                 }
