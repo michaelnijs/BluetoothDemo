@@ -71,14 +71,16 @@ public class MainActivity extends Activity {
         led_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (led_btn.getText() == "Led is Off") {
+                String led_off = "Led is Off";
+                String led_on = "Led is On";
+                if (led_btn.getText().equals(led_off)) {
                     // Turn the led on!
                     m_connected_thread.write("1");
-                    led_btn.setText("Led is On");
+                    led_btn.setText(led_on);
                     Toast.makeText(getBaseContext(), "Led will be turned on", 2);
                 } else {
                     m_connected_thread.write("2");
-                    led_btn.setText("Led is Off");
+                    led_btn.setText(led_off);
                     Toast.makeText(getBaseContext(), "Led will be turned off", 2);
                 }
             }
